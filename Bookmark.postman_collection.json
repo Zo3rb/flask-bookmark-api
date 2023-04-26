@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "b387656b-ace1-45c3-90d3-b21007a260d1",
+		"name": "Bookmark",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST (register)  -  http://localhost:5000/api/v1/auth/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"sdasdad\",\r\n    \"email\": \"example@email.net\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST (login)  -  http://localhost:5000/api/v1/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@email.net\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET (me)  -  http://localhost:5000/api/v1/auth/me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTc0NzkyNCwianRpIjoiOGQwMTNkMzUtMTg4Ny00ZTE4LWE3ZDUtZjk1NzI4ODBjMzM4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjgxNzQ3OTI0LCJleHAiOjE2ODE3NDg4MjR9.3QJB00Voi0gmrki3nO3snJ4y0LiO7pB8fUzZkImpBWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@email.net\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET (refresh)  -  http://localhost:5000/api/v1/auth/refresh",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTgzMzIzOCwianRpIjoiNWZkOTc2MmItM2ZiMC00NmVmLWI4ZDAtN2IwMWEzMzllN2MyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjgxODMzMjM4LCJleHAiOjE2ODE4MzQxMzh9.r_lwxYA61MKWn4TK2fSYJ_drizEjlKH4CEzTyXH10Ts",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@email.net\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/auth/refresh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET (bookmarks)  -  http://localhost:5000/api/v1/bookmarks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTkwMTA3NCwianRpIjoiZjkwMWEzNGMtODU0My00YmNjLTkxZDAtNzJlMTJkM2I0ZjIzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjgxOTAxMDc0LCJleHAiOjE2ODIxNjAyNzR9.81Pz_SPHJhkCPgJCI-ved1xRLu86-clZ7RRUAjYMPRE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bookmarks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bookmarks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST (bookmarks)  -  http://localhost:5000/api/v1/bookmarks",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTgzMzIzOCwianRpIjoiNWZkOTc2MmItM2ZiMC00NmVmLWI4ZDAtN2IwMWEzMzllN2MyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjgxODMzMjM4LCJleHAiOjE2ODE4MzQxMzh9.r_lwxYA61MKWn4TK2fSYJ_drizEjlKH4CEzTyXH10Ts",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@email.net\",\r\n    \"password\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bookmarks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bookmarks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET (bookmarks/:short_url)  -  http://localhost:5000/api/v1/bookmarks/:short_url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bookmarks/Y2jVFV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bookmarks",
+						"Y2jVFV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT (bookmarks/:short_url)  -  http://localhost:5000/api/v1/bookmarks/:short_url",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTkwMTA3NCwianRpIjoiZjkwMWEzNGMtODU0My00YmNjLTkxZDAtNzJlMTJkM2I0ZjIzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNjgxOTAxMDc0LCJleHAiOjE2ODIxNjAyNzR9.81Pz_SPHJhkCPgJCI-ved1xRLu86-clZ7RRUAjYMPRE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"http://localhost\",\r\n    \"body\": \"this is the local host machine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bookmarks/Y2jVFV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bookmarks",
+						"Y2jVFV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE (bookmarks/:short_url)  -  http://localhost:5000/api/v1/bookmarks/:short_url",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4MTk5NzQxMSwianRpIjoiMDRkZGY1YmYtNWU2My00ODdjLWE0YzctZDk3ZWU2NDFlZDkwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6OSwibmJmIjoxNjgxOTk3NDExLCJleHAiOjE2ODIyNTY2MTF9.IpMbKnm-53Ioai_lwWPwRpv9_MGqfQ426ReOZqxzwp4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"The First URL Inseted\",\r\n    \"url\": \"www.google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/bookmarks/fz3QTP",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"bookmarks",
+						"fz3QTP"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "API_HEALTH_CHECK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/health_check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"health_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "URL_SHORT_REDIRECTION",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/Y2jVFV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Y2jVFV"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
